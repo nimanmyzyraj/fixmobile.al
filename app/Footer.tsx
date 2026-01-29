@@ -3,21 +3,21 @@ import { Smartphone, Mail, Phone, MapPin } from "lucide-react";
 
 const footerLinks = {
   products: [
-    { name: "Phones", href: "/products?category=phones" },
-    { name: "Laptops", href: "/products?category=laptops" },
-    { name: "Tablets", href: "/products?category=tablets" },
-    { name: "Accessories", href: "/products?category=accessories" },
+    { name: "Telefona", href: "/products?category=phones" },
+    { name: "Laptop", href: "/products?category=laptops" },
+    { name: "Tablet", href: "/products?category=tablets" },
+    { name: "Aksesore", href: "/products?category=accessories" },
   ],
   services: [
-    { name: "Phone Repair", href: "/services/phone" },
-    { name: "Laptop Repair", href: "/services/computer" },
-    { name: "Screen Replacement", href: "/services/phone" },
-    { name: "Battery Replacement", href: "/services/phone" },
+    { name: "Riparim Telefoni", href: "/services/phone" },
+    { name: "Riparim Laptopi", href: "/services/computer" },
+    { name: "Nderrim Ekrani", href: "/services/phone" },
+    { name: "Nderrim Baterie", href: "/services/phone" },
   ],
   company: [
-    { name: "Contact", href: "/contact" },
-    { name: "Store Location", href: "/contact" },
-    { name: "Warranty Policy", href: "/contact" },
+    { name: "Na Kontaktoni", href: "/contact" },
+    { name: "Vendndodhja e Dyqanit", href: "/contact" },
+    { name: "Politika e Garancisë", href: "/contact" },
   ],
 };
 
