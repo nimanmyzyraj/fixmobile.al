@@ -27,7 +27,7 @@ const navigation = [
     href: "#",
     children: [
       {
-        name: "Shërbime Kompjuterik",
+        name: "Shërbime Kompjuteri",
         href: "/services/computer",
         icon: Monitor,
       },
@@ -45,7 +45,7 @@ export function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/98 backdrop-blur supports-[backdrop-filter]:bg-background/90">
       <nav className="mx-auto flex container items-center justify-between px-6 py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
