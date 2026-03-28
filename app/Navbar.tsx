@@ -1,7 +1,5 @@
 "use client";
 
-import Link from "next/link";
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -9,15 +7,9 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import {
-  Menu,
-  X,
-  ChevronDown,
-  Smartphone,
-  Monitor,
-  Wrench,
-  Phone,
-} from "lucide-react";
+import { ChevronDown, Menu, Monitor, Phone, Smartphone, X } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
 
 const navigation = [
   { name: "Kryefaqja", href: "/" },
@@ -47,16 +39,14 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/98 backdrop-blur supports-[backdrop-filter]:bg-background/90">
       <nav className="mx-auto flex container items-center justify-between px-6 py-4 lg:px-8">
-        <div className="flex lg:flex-1">
-          <Link href="/" className="-m-1.5 p-1.5 flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-foreground">
-              <Smartphone className="h-5 w-5 text-background" />
-            </div>
-            <span className="text-xl font-semibold tracking-tight">
-              Fix Mobile Shop
-            </span>
-          </Link>
-        </div>
+        {/*Logo dhe emri*/}
+        <Link href="/" className="flex lg:flex-1 items-center shrink-0">
+          <img
+            src="/website-logo.png"
+            alt="Fix Mobile Logo"
+            className="h-11.5 w-auto object-contain pt-1"
+          />
+        </Link>
 
         {/* Mobile menu button */}
         <div className="flex lg:hidden">
@@ -80,7 +70,7 @@ export function Navbar() {
             item.children ? (
               <DropdownMenu key={item.name}>
                 <DropdownMenuTrigger asChild>
-                  <button className="flex items-center gap-1 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground">
+                  <button className="flex items-center gap-1 font-medium text-muted-foreground transition-colors hover:text-foreground">
                     {item.name}
                     <ChevronDown className="h-4 w-4" />
                   </button>
@@ -103,7 +93,7 @@ export function Navbar() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+                className="font-medium text-muted-foreground transition-colors hover:text-foreground"
               >
                 {item.name}
               </Link>
@@ -115,7 +105,7 @@ export function Navbar() {
           <Button variant="outline" size="sm" asChild>
             <a href="tel:0676002020" className="flex items-center gap-2">
               <Phone className="h-4 w-4" />
-              Na Telefononi
+              Whatsapp
             </a>
           </Button>
         </div>
@@ -128,7 +118,7 @@ export function Navbar() {
             {navigation.map((item) =>
               item.children ? (
                 <div key={item.name} className="space-y-1">
-                  <span className="block py-2 text-sm font-medium text-muted-foreground">
+                  <span className="block py-2 font-medium text-muted-foreground">
                     {item.name}
                   </span>
                   <div className="pl-4 space-y-1">
@@ -136,7 +126,7 @@ export function Navbar() {
                       <Link
                         key={child.name}
                         href={child.href}
-                        className="flex items-center gap-2 py-2 text-sm text-muted-foreground hover:text-foreground"
+                        className="flex items-center gap-2 py-2 text-muted-foreground hover:text-foreground"
                         onClick={() => setMobileMenuOpen(false)}
                       >
                         <child.icon className="h-4 w-4" />
@@ -149,7 +139,7 @@ export function Navbar() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="block py-2 text-sm font-medium text-muted-foreground hover:text-foreground"
+                  className="block py-2 font-medium text-muted-foreground hover:text-foreground"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}
